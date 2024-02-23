@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Open Recipe</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- <center> -->
+    
+    <div class = 'temperature-display'>
+      <p id = temperature>Temperature in Karachi is</p>
+    </div>
+        
+    <img src = 'recipe_logo.png' width="200" height="180" style = 'margin-left: -5px;'>
+      
+    <h2 class = 'main-heading'>Want to cook your favourite dish? Let us find a recipe for you</h2>
+    
+    <div class = 'preference'>
+    <fieldset>
+        <legend class = 'legend-heading'>Select your preference:</legend>
+        <div class = 'preference-options'>
+            <input type = 'radio' id = 'carnivore' name = 'preference'>  Carnivore<br>
+            <input type = 'radio' id = 'veg' name = 'preference'>  Vegeterian<br>
+            <input type = 'radio' id = 'vegan' name = 'preference'>  Vegan<br>
+            <input type = 'radio' id = 'karachite' name = 'preference'>  Karachiite<br>
+        </div>
+    </fieldset>
+  </div>
+    
+    <h3 class = 'heading-dishes'>Select from the most ordered dishes: </h3>
+    
+    <div class = 'dishes-options'>
+    <select name = 'dishes' id = 'dishes' class = 'dishes-select'>
+        <option></option>
+        <option id = 'aloo' value = 'aloo' class = 'dish-option'>Aloo Baingan</option>
+        <option id = 'chicken-biryani' value = 'chicken-biryani' class = 'dish-option'>Chicken Biryani</option>
+        <option id = 'vegetable-biryani' value = 'vegetable-biryani' class = 'dish-option'>Vegetable Biryani</option>
+        <option id = 'veg-curry' value = 'veg-curry' class = 'dish-option'>Veg Curry</option>
+        <option id = 'chicken-korma' value = 'chicken-korma' class = 'dish-option'>Chicken Korma</option>
+    </select> 
+    </div>
+  
+    <button class = 'submit-btn' id = 'submit'>SUBMIT</button>
+  <!-- </center> -->
+  </body>
+
+    <script>
+      function getWeatherData(){
+        var apiURL = 'http://api.weatherapi.com/v1/current.json?key=aa2c2b3a7f004de0a64155951231802&q=Karachi&aqi=yes'
+        try{
+          $.get(apiURL,function(data){
+            var weatherData = 'Temperature in Karachi is: ' + (' ' + data['current']['temp_c']) + '&deg' + 'C';
+            document.getElementById('temperature').innerHTML = weatherData;
+          });
+        }
+        catch(e){
+          alert(e);
+        }
+      }
+      getWeatherData();
+      setInterval(function(){
+          getWeatherData();
+      }, 3000000);
+    </script>
+
+  </html>

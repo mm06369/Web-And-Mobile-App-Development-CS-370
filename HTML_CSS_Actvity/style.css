@@ -1,0 +1,119 @@
+
+
+*{
+    background-color: #ede8e8;
+    font-family: sans-serif;
+    /* text-align: center; */
+    /* align-content: center; */
+    align-items: center;
+}
+
+body{
+    display:flex; 
+    flex-direction:column; 
+    justify-content:center;
+    text-align: center;
+}
+
+.main-heading{
+    color: #a33c1f;
+    font-size: 15px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.legend-heading{
+    color: #800080;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+fieldset{
+    border: 2px solid #FFA500;
+    width: 450px ;
+    margin:1px;
+    
+}
+
+.preference-options{
+    font-size: 18px;
+    font-weight: 600;
+    color: #a33c1f;
+    
+}
+
+.submit-btn{
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    background-color: #FFA500;
+    border: 3px solid #800080;
+    color: #800080;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: sans-serif;
+    letter-spacing: 0.08cm;
+
+}
+
+.submit-btn:hover{
+    background-color: #800080;
+    color: #FFA500;
+    border: 3px solid #FFA500;
+
+}
+
+.heading-dishes{
+    margin-top: 20px;
+    color:#800080;
+}
+
+.dishes-select{
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    border:2px solid #FFA500;
+}
+
+.dishes-select:hover{
+    border: 2px solid #800080;
+
+}
+
+.dishes-select:focus{
+    border: 2px solid #800080;
+    color: #4B0082;
+}
+
+
+.dishes-options{
+    margin-top: 10px;
+    margin-left: -1px;
+}
+
+
+.dish-option{
+    font-size: 18px;
+    font-weight: 600;
+    color: #a33c1f;
+}
+
+#carnivore, #veg, #vegan{
+    margin-bottom: 15px;
+}
+
+#carnivore{
+    margin-top: 20px;
+}
+
+.temperature-display{
+    height: 50px;
+    width: 450px;
+    border: 2px solid #FFA500;
+    margin-bottom: 5px;
+}
+
+.temperature-display p{
+    color: #4B0082;
+    font-size: 20px;
+}
